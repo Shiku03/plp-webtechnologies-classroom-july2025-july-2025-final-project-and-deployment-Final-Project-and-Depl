@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Vista Hotel & Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="#" class="logo" onclick="showPage('home'); return false;">Grand Vista</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-link active" onclick="showPage('home'); return false;">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('rooms'); return false;">Rooms</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('restaurant'); return false;">Restaurant</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('about'); return false;">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('contact'); return false;">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Grand Vista</h1>
+                <p>Experience Luxury & Comfort Like Never Before</p>
+                <a href="#" class="btn" onclick="showPage('rooms'); return false;">Book Your Stay</a>
+                <a href="#" class="btn btn-secondary" onclick="showPage('restaurant'); return false;">View Menu</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Grand Vista?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏨</div>
+                        <h3>Luxury Rooms</h3>
+                        <p>Elegantly designed rooms with modern amenities and breathtaking views of the city.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍽️</div>
+                        <h3>Fine Dining</h3>
+                        <p>Award-winning restaurant serving international cuisine prepared by master chefs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💆</div>
+                        <h3>Spa & Wellness</h3>
+                        <p>Relax and rejuvenate at our world-class spa with premium treatments.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏊</div>
+                        <h3>Pool & Fitness</h3>
+                        <p>Rooftop infinity pool and state-of-the-art fitness center available 24/7.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Prime Location</h3>
+                        <p>Located in the heart of the city, close to major attractions and business districts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Event Spaces</h3>
+                        <p>Versatile meeting rooms and banquet halls for any occasion or celebration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rooms Page -->
+    <div id="rooms" class="page">
+        <section class="rooms-hero">
+            <h1>Our Accommodations</h1>
+        </section>
+
+        <section class="rooms-section">
+            <div class="container">
+                <h2 class="section-title">Choose Your Perfect Room</h2>
+                <div class="rooms-grid">
+                    <div class="room-card">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&h=300&fit=crop" alt="Deluxe Room">
+                        <div class="room-info">
+                            <h3>Deluxe Room</h3>
+                            <p class="room-price">$150 / night</p>
+                            <p>Spacious room with elegant decor and modern amenities for a comfortable stay.</p>
+                            <ul class="room-features">
+                                <li>King-size bed</li>
+                                <li>Free Wi-Fi</li>
+                                <li>Flat-screen TV</li>
+                                <li>Mini bar</li>
+                                <li>City view</li>
+                            </ul>
+                            <a href="#" class="btn" onclick="showPage('contact'); return false;">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="room-card">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop" alt="Executive Suite">
+                        <div class="room-info">
+                            <h3>Executive Suite</h3>
+                            <p class="room-price">$250 / night</p>
+                            <p>Premium suite with separate living area, perfect for business travelers.</p>
+                            <ul class="room-features">
+                                <li>Separate living room</li>
+                                <li>Work desk</li>
+                                <li>Premium bedding</li>
+                                <li>Coffee machine</li>
+                                <li>Balcony</li>
+                            </ul>
+                            <a href="#" class="btn" onclick="showPage('contact'); return false;">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="room-card">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&h=300&fit=crop" alt="Presidential Suite">
+                        <div class="room-info">
+                            <h3>Presidential Suite</h3>
+                            <p class="room-price">$500 / night</p>
+                            <p>Ultimate luxury with panoramic views and exclusive amenities.</p>
+                            <ul class="room-features">
+                                <li>Master bedroom</li>
+                                <li>Private terrace</li>
+                                <li>Jacuzzi</li>
+                                <li>Butler service</li>
+                                <li>Dining area</li>
+                            </ul>
+                            <a href="#" class="btn" onclick="showPage('contact'); return false;">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Restaurant Page -->
+    <div id="restaurant" class="page">
+        <section class="restaurant-hero">
+            <h1>Culinary Excellence</h1>
+        </section>
+
+        <section class="restaurant-section">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+                
+                <div class="menu-categories">
+                    <button class="menu-btn active" onclick="filterMenu('all')">All</button>
+                    <button class="menu-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+                    <button class="menu-btn" onclick="filterMenu('mains')">Main Course</button>
+                    <button class="menu-btn" onclick="filterMenu('desserts')">Desserts</button>
+                </div>
+
+                <div class="menu-items" id="menuItems">
+                    <div class="menu-item show" data-category="appetizers">
+                        <h4>Caesar Salad</h4>
+                        <p>Crisp romaine lettuce with parmesan and house-made dressing</p>
+                        <p class="price">$12</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="appetizers">
+                        <h4>French Onion Soup</h4>
+                        <p>Classic soup with caramelized onions and gruyere cheese</p>
+                        <p class="price">$10</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="appetizers">
+                        <h4>Bruschetta</h4>
+                        <p>Toasted bread topped with fresh tomatoes, basil, and olive oil</p>
+                        <p class="price">$14</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="mains">
+                        <h4>Grilled Salmon</h4>
+                        <p>Fresh Atlantic salmon with lemon butter sauce and seasonal vegetables</p>
+                        <p class="price">$32</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="mains">
+                        <h4>Ribeye Steak</h4>
+                        <p>Prime ribeye cooked to perfection with garlic mashed potatoes</p>
+                        <p class="price">$45</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="mains">
+                        <h4>Chicken Parmesan</h4>
+                        <p>Breaded chicken breast with marinara sauce and melted mozzarella</p>
+                        <p class="price">$28</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="desserts">
+                        <h4>Tiramisu</h4>
+                        <p>Classic Italian dessert with layers of coffee-soaked ladyfingers</p>
+                        <p class="price">$10</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="desserts">
+                        <h4>Chocolate Lava Cake</h4>
+                        <p>Warm chocolate cake with a molten center, served with vanilla ice cream</p>
+                        <p class="price">$12</p>
+                    </div>
+
+                    <div class="menu-item show" data-category="desserts">
+                        <h4>Crème Brûlée</h4>
+                        <p>Silky vanilla custard with a caramelized sugar crust</p>
+                        <p class="price">$11</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="about-hero">
+            <h1>About Grand Vista</h1>
+        </section>
+
+        <section class="about-content">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 1985, Grand Vista Hotel has been a beacon of luxury and hospitality for nearly four decades. What began as a vision to create an unforgettable guest experience has evolved into one of the most prestigious hotels in the region.</p>
+                    <p>Our commitment to excellence is reflected in every detail, from our meticulously designed rooms to our award-winning restaurant. We believe that true luxury lies in the perfect blend of comfort, style, and personalized service.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&h=400&fit=crop" alt="Hotel Exterior">
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop" alt="Hotel Interior">
+                </div>
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>At Grand Vista, our mission is to provide an exceptional hospitality experience that exceeds expectations. We strive to create lasting memories for every guest through impeccable service, luxurious accommodations, and world-class dining.</p>
+                    <p>Our dedicated team of professionals works tirelessly to ensure that every aspect of your stay is perfect, whether you're here for business or pleasure.</p>
+                </div>
+            </div>
+
+            <div class="features">
+                <h2 class="section-title">Our Values</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Excellence</h3>
+                        <p>We pursue excellence in everything we do, from service to cuisine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Integrity</h3>
+                        <p>We operate with honesty, transparency, and respect for all.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💝</div>
+                        <h3>Hospitality</h3>
+                        <p>We treat every guest like family, ensuring comfort and satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Visit Us</h3>
+                    <div class="contact-item">
+                        <h4>📍 Address</h4>
+                        <p>Utumishi Lane<br>Westlands, Nairobi</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📞 Phone</h4>
+                        <p>+254 12345678</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>✉️ Email</h4>
+                        <p>info@grandvista.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🕐 Hours</h4>
+                        <p>Front Desk: 24/7<br>Restaurant: 7:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <div class="success-message" id="successMessage">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name">
+                        <span class="error-message">Please enter your name</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error-message">Please enter a valid email</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message">Please enter your phone number</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                        <span class="error-message">Please enter your message</span>
+                    </div>
+                    <button class="btn" onclick="submitForm()">Send Message</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Grand Vista Hotel</h3>
+                <p>Experience luxury and comfort in the heart of the city. Your perfect stay awaits.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+                    <li><a href="#" onclick="showPage('rooms'); return false;">Rooms</a></li>
+                    <li><a href="#" onclick="showPage('restaurant'); return false;">Restaurant</a></li>
+                    <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+                    <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Room Service</a></li>
+                    <li><a href="#">Spa & Wellness</a></li>
+                    <li><a href="#">Event Planning</a></li>
+                    <li><a href="#">Airport Shuttle</a></li>
+                    <li><a href="#">Concierge</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Utumishi Lane</li>
+                    <li>Westlands, Nairobi</li>
+                    <li>Phone: +254 12345678</li>
+                    <li>Email: info@grandvista.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grand Vista Hotel & Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
